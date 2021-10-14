@@ -16,6 +16,7 @@ for i in range(100):
     population.append(people.people())
 
 ## Loop runs for each day in a month and each day the activities array is emptied
+fig, ax = plt.subplots()
 
 for days in range(30):
     activities = [[]]*100
@@ -66,7 +67,6 @@ for days in range(30):
 
     ## Plotting the results
 
-    fig, ax = plt.subplots()
     plt.subplot(4, 1, 1)
     plt.plot(range(100), acads)
     plt.xlabel("Person")
@@ -87,7 +87,7 @@ for days in range(30):
     fig.canvas.mpl_connect("key_press_event", on_press) #Detect key press
     plt.draw()
     plt.pause(1)
-    plt.clf()
+    fig.clf()
 
 ## Compile data and draw the final graph at the end of the month
 
@@ -108,7 +108,7 @@ for person in population:
 
 ## Plotting the results
 
-fig, ax = plt.subplots()
+
 plt.subplot(4, 1, 1)
 plt.plot(range(100), acads)
 plt.xlabel("Person")
