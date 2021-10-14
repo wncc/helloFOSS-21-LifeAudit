@@ -40,7 +40,7 @@ The other file is [simulation.py](https://github.com/Karrthik-Arya/Hello-FOSS-Li
 
 7. **Representing the results**: As you can see in the code right now it simply plots graphs of each factor for each person everyday. However its hard to draw any kind of conclusions from such graphs. So you should try and improve the ways results are being represented. Try drawing scatter plots between factors to see correlatons between them. You can draw these plots considering weekly averages of people instead of daily. After task 5 you can compare the plots specifically of the days close to the event to see its impact.      
 
-### Note: The above mentioned tasks are not hard guidelines and are just to give u a nudge to think in the right direction. So feel free to put your creativity & critical thinking to the work and make some awesome simulations! 
+### Note: The above mentioned tasks are not hard guidelines and are just to give you a nudge to think in the right direction. So feel free to put your creativity & critical thinking to the work and make some awesome simulations! 
 
 Join our [Discord server](https://discord.gg/Rkh6e6F2) for discussing your doubts.
 ***
