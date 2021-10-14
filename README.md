@@ -1,4 +1,4 @@
-# Hello-FOSS-Simulation
+# Hello-FOSS-LifeAudit
 This project is a part of HELLO-FOSS: Celebration of Open Source by the Web and Coding Club. In this project we will be seeing the application of python in
 developing an interesting, statistical simulation of our life in an online semester
 
@@ -22,7 +22,7 @@ There are 2 files here. One is [people.py](https://github.com/Karrthik-Arya/Hell
 The other file is [simulation.py](https://github.com/Karrthik-Arya/Hello-FOSS-LifeAudit/blob/main/simulation.py), this contains the code in which people are instantiatied, they perform various daily activities by calling the appropriate functions etc. Right now the simulation contains 100 people with exactly the same initial characteristics. The simulation runs and it plots some simple graphs from the results. The graphs contain the academic level, physical fitness, extracurricular development and mental health plotted daily for each person. 
 
 #### The Tasks
-1. **Diversity**: Right now the model considers all the people of the same type which is far from true. Add more classes of people for different types of people with different characteristics, different interests(see task-4) like coders, fitness freaks, maggus etc. These can inherit functions and attributes from the people class or can be altogether different classes. You can watch [this](https://www.youtube.com/watch?v=H2SQrZK2nvM&list=PLzMcBGfZo4-l1MqB1zoYfqzlj_HH-ZzXt&index=6) short video on inheritance if you don't know about it. 
+1. **Diversity**: Right now the model considers all the people have similar interests which is far from true. Add more classes of people for different types of people with different characteristics, different interests(see task-4) like coders, fitness freaks, maggus etc. These can inherit functions and attributes from the people class or can be altogether different classes. You can watch [this](https://www.youtube.com/watch?v=H2SQrZK2nvM&list=PLzMcBGfZo4-l1MqB1zoYfqzlj_HH-ZzXt&index=6) short video on inheritance if you don't know about it. 
 
 
 2. **Variation of Factors**: In the python file, change the variation of the factors so that the value remains between 0 and 100. The variation shouldn't just increment or decrement the value by a constant and it should depend on the current level as well. Consider the scenerio for academics for instance, initially you might study a lot but then you reach your saturation point and then the rate would decrease. Don't forget to model this situation! You can use the Gaussian function to model this or even simple if eles commands or whatever function you think would be suitable. 
@@ -40,7 +40,7 @@ The other file is [simulation.py](https://github.com/Karrthik-Arya/Hello-FOSS-Li
 
 7. **Representing the results**: As you can see in the code right now it simply plots graphs of each factor for each person everyday. However its hard to draw any kind of conclusions from such graphs. So you should try and improve the ways results are being represented. Try drawing scatter plots between factors to see correlatons between them. You can draw these plots considering weekly averages of people instead of daily. After task 5 you can compare the plots specifically of the days close to the event to see its impact.      
 
-### Note: The above mentioned tasks are not hard guidelines and are just to give u a nudge to think in the right direction. So feel free to put your creativity & critical thinking to the work and make some awesome simulations! 
+### Note: The above mentioned tasks are not hard guidelines and are just to give you a nudge to think in the right direction. So feel free to put your creativity & critical thinking to the work and make some awesome simulations! 
 
 Join our [Discord server](https://discord.gg/Rkh6e6F2) for discussing your doubts.
 ***
