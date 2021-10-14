@@ -1,4 +1,4 @@
-# Hello-FOSS-Simulation
+# Hello-FOSS-LifeAudit
 This project is a part of HELLO-FOSS: Celebration of Open Source by the Web and Coding Club. In this project we will be seeing the application of python in
 developing an interesting, statistical simulation of our life in an online semester
 
