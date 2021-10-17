@@ -29,6 +29,27 @@ class people():
         self.fitness += 1
         self.mental_health += 0.5
 
+class coder(people):
+    def __init__(self):
+        super().__init__(self)
+        self.extracur = 15
+        self.technical = 20
+        self.cult = 10
+        self.fitness = 70
 
+    def coding(self):
+        self.fitness -= 0.1
+        self.technical += 0.1
 
+class dancer(people):
+    def __init__(self):
+        super().__init__(self)
+        self.extracur = 20
+        self.technical = 10
+        self.cult = 20
+        self.fitness = 80
 
+    def dancing(self):
+        self.fitness += 0.1
+        self.cult += 0.1
+        self.laziness -= 0.05
