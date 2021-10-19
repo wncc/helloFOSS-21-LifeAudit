@@ -2,7 +2,7 @@ import random as rnd        ## For generating random choices/numbers
 import matplotlib.pyplot as plt         ## For plotting the graphs     
 import seaborn as sns           ## For data visualization and analysis
 import sys
-import people               #Importing the people module
+from people_20d070074 import *                #Importing the people module
 
 def on_press(event):
     """
@@ -14,7 +14,11 @@ def on_press(event):
 population = []
 for i in range(100):
     population.append(people.people())
-
+for i in range(10):
+    population.append(coder.coder())
+for i in range(10):
+    population.append(dancer.dancer())
+    
 ## Loop runs for each day in a month and each day the activities array is emptied
 fig, ax = plt.subplots()
 
