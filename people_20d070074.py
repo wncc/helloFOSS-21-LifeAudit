@@ -31,7 +31,7 @@ class people():
 
 class coder(people):
     def __init__(self):
-        super().__init__(self)
+        super().__init__()
         self.extracur = 15
         self.technical = 20
         self.cult = 10
@@ -43,7 +43,7 @@ class coder(people):
 
 class dancer(people):
     def __init__(self):
-        super().__init__(self)
+        super().__init__()
         self.extracur = 20
         self.technical = 10
         self.cult = 20

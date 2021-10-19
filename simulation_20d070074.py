@@ -13,19 +13,19 @@ def on_press(event):
 #Initializing the people 
 population = []
 for i in range(100):
-    population.append(people.people())
+    population.append(people())
 for i in range(10):
-    population.append(coder.coder())
+    population.append(coder())
 for i in range(10):
-    population.append(dancer.dancer())
+    population.append(dancer())
     
 ## Loop runs for each day in a month and each day the activities array is emptied
 fig, ax = plt.subplots()
 
 for days in range(30):
-    activities = [[]]*100
+    activities = [[]]*120
     for hours in range(24):
-        for i in range(100):
+        for i in range(120):
             person = population[i]
             if(hours >= rnd.randint(8, 8+person.laziness*4) or hours <= 17): #Depending on how lazy the person is, it decides when the person starts his day
 
@@ -72,19 +72,19 @@ for days in range(30):
     ## Plotting the results
 
     plt.subplot(4, 1, 1)
-    plt.plot(range(100), acads)
+    plt.plot(range(120), acads)
     plt.xlabel("Person")
     plt.ylabel("Academic Level")
     plt.subplot(4, 1, 2)
-    plt.plot(range(100), extracurs)
+    plt.plot(range(120), extracurs)
     plt.xlabel("Person")
     plt.ylabel("Extracurricular Level")
     plt.subplot(4, 1, 3)
-    plt.plot(range(100), mental_healths)
+    plt.plot(range(120), mental_healths)
     plt.xlabel("Person")
     plt.ylabel("Mental Health")
     plt.subplot(4, 1, 4)
-    plt.plot(range(100), physical_healths)
+    plt.plot(range(120), physical_healths)
     plt.xlabel("Person")
     plt.ylabel("Physical Fitness")
     plt.tight_layout()
