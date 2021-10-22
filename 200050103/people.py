@@ -1,6 +1,7 @@
 ## Class for people defining various parameters such as acads, extracurriculars, tech, cult etc
 ## Various member functions are defined indicating the effect of a particular activity
 import random
+import math
 types_of_people = 2 #change this variable with more number of people
 class people():
     def __init__(self):
@@ -18,7 +19,9 @@ class people():
         self.technical_max = 100
         self.fitness_min = 0
         self.fitness_max = 200
-        self.laziness_max = 1
+        self.laziness_max = 3
+        self.academics_max = 100
+        self.academics_min = 0
 
     def adjust(self):
         if self.technical>self.technical_max:
@@ -29,10 +32,19 @@ class people():
             self.fitness = self.fitness_max
         if self.laziness > self.laziness_max:
             self.laziness = self.laziness_max
+        if self.academics < self.academics_min:
+            self.academics = self.academics_min
+        if self.academics > self.academics_max:
+            self.academics = self.academics_max
+
+    def choose(self,min,max,parameter):           #selects value increment or decrement as per tanh function's slope
+        #parameter = (max-min)tanh(x)+min
+        dx = 0.5
+        return (max-min)*(1-math.tanh(parameter))*dx
 
     def study(self):
-        self.academics += 0.5
-        self.fitness -= 0.1
+        self.academics += self.choose(0,self.academics_max,self.academics)
+        self.fitness -= self.choose(self.fitness_min,self.fitness_max,self.fitness)
         self.adjust()
 
     def hobby(self):
@@ -42,11 +54,11 @@ class people():
 
     def relax(self):
         self.mental_health += 0.7
-        self.fitness -= 0.1
+        self.fitness -= self.choose(self.fitness_min,self.fitness_max,self.fitness)
         self.adjust()
 
     def exercise(self):
-        self.fitness += 1
+        self.fitness -= self.choose(self.fitness_min,self.fitness_max,self.fitness)
         self.mental_health += 0.5
         self.adjust()
 
@@ -65,7 +77,7 @@ class coder(people):
     
     def coding_practice(self):
         self.extracur += 0.5
-        self.fitness -= 0.5
+        self.fitness -= self.choose(self.fitness_min,self.fitness_max,self.fitness)
         self.adjust()
     
     def comp_coding(self):
@@ -84,9 +96,8 @@ class coder(people):
     
     def contributive_coding(self):
         self.extracur += 0.5
-        if self.technical<self.technical_max:
-            self.technical += 0.5
-        self.fitness -= 0.5
+        self.technical += self.choose(0,self.technical_max,self.technical)
+        self.fitness -= self.choose(self.fitness_min,self.fitness_max,self.fitness)
 
         pr_accept = (random.randint(0,10000) <= ((self.technical+self.extracur)*100))  #success on  based on technical skill and extracur
         if pr_accept:

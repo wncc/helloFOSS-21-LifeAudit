@@ -54,6 +54,7 @@ for days in range(30):
                     person.mental_health -= 1
             
                 person.academics -= 0.02 #To simulate forgetfullnes, each day you tend to a forget a few things from days back
+                person.adjust()
             elif type(person)==type(cod):
                 if(hours >= rnd.randint(8, 8+person.laziness*4) or hours <= 17): #Depending on how lazy the person is, it decides when the person starts his day
 
@@ -88,6 +89,7 @@ for days in range(30):
                     person.mental_health -= 1
             
                 person.academics -= 0.02 #To simulate forgetfullnes, each day you tend to a forget a few things from days back
+                person.adjust()
         
     ## Appending the arrays according to the activities and the choices in a day
 
