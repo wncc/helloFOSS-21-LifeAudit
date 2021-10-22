@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt         ## For plotting the graphs
 import seaborn as sns           ## For data visualization and analysis
 import sys
 import people               #Importing the people module
+import math
 
 def on_press(event):
     """
@@ -56,7 +57,7 @@ for days in range(30):
                 person.academics -= 0.02 #To simulate forgetfullnes, each day you tend to a forget a few things from days back
                 person.adjust()
             elif type(person)==type(cod):
-                if(hours >= rnd.randint(8, 8+person.laziness*4) or hours <= 17): #Depending on how lazy the person is, it decides when the person starts his day
+                if(hours >= rnd.randint(8, 8+math.floor(person.laziness)*4) or hours <= 17): #Depending on how lazy the person is, it decides when the person starts his day
 
                     ## Randomly choosing between study, hobby and relax according to their weights defined earlier
 
